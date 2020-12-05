@@ -1,3 +1,4 @@
 # C_3Project
-Las personas necesitan controlar e identificar sus gastos mensuales para mejorar sus finanzas personales.
-Y además ya pude bajar el repositorio a mi Pc
+Muchos hoteles no tiene claro cuanto y como variar sus precios de
+acuerdo las temporadas turísticas de la región y del país para ser
+rentables y mantener constante flujo de clientes.
