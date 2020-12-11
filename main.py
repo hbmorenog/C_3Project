@@ -28,6 +28,6 @@ async def add_hotel(hotel_add: hotel_models.HotelAdd):
     if hotel_add_db:
         return {"Mensaje" : "Agregado satisfactoriamente"}
     else:
-        raise HTTPException(status_code=400 , detail="El hotel ya existe")
+        raise HTTPException(status_code=400 , detail="El hotel ya existe en el db")
 
 
