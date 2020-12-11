@@ -1,5 +1,5 @@
 from fastapi import FastAPI,HTTPException
-from db import contactos_db
+from db import hotel_db
 
 app= FastAPI()
 
