@@ -2,7 +2,6 @@ from pydantic import BaseModel
 
 
 class HotelInDB(BaseModel):
-    id: int
     mail: str
     password: str
     ubication: str
@@ -11,17 +10,17 @@ class HotelInDB(BaseModel):
 
 
 database_hotel={
-    1: HotelInDB(id=1,mail="decameron@gmail.com",
+    "decameron@gmail.com": HotelInDB(mail="decameron@gmail.com",
                     password="123abc",
                     ubication="Cartagena",
                     name="Decameron",
                     price=250000),
-    2: HotelInDB(id=2,mail="hilton@gmail.com",
+    "hilton@gmail.com": HotelInDB(id=2,mail="hilton@gmail.com",
                     password="root",
                     ubication="Santa Marta",
                     name="Hilton",
                     price=300000),
-    3: HotelInDB(id=3,mail="calypso@gmail.com",
+    "calypso@gmail.com": HotelInDB(id=3,mail="calypso@gmail.com",
                     password="admin123",
                     ubication="San Andres",
                     name="Calypso Beach",
@@ -35,9 +34,9 @@ def get_Hotels():
         lista_hoteles.append(database_hotel[hotel])
     return lista_hoteles
 
-def get_Hotel_id(id):
-    if id in database_hotel:
-        return database_hotel[id]
+def get_Hotel_mail(mail):
+    if mail in database_hotel:
+        return database_hotel[mail]
     else:
         return None
 
