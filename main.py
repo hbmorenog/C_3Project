@@ -1,9 +1,16 @@
 from fastapi import FastAPI,HTTPException
 from db import hotel_db
 from models import hotel_models
+from fastapi.middleware.cors import CORSMiddleware
+origins = [
+"http://localhost", "http://localhost:8080",
+]
 
 app= FastAPI()
-
+app.add_middleware(
+CORSMiddleware, allow_origins=origins,
+allow_credentials=True, allow_methods=["*"], allow_headers=["*"],
+)
 @app.get("/hoteles/resumen")
 async def get_hoteles_api():
     return hotel_db.get_Hotels()
